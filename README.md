@@ -15,9 +15,10 @@ The dataset was provided from SwissNLP in the scope of this master thesis. The a
 The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transcripts of the corpus were used to train the model on spontaneous speech. 
 
 ## Files 
-### Folder: XLSR 
-The files in this folder use the Wav2Vec XLS-R model. There exist different versions of the usage of the model, mainly differing in the way data gets loaded and preprocessed. 
+### Folder: Prepared Speech
+#### XLSR 
+All files starting with "XLSR"  use the Wav2Vec XLS-R model. There exist different versions of the usage of the model, mainly differing in the way data gets loaded and preprocessed. 
 
-### Folder: Whisper
-The files in this folder use the Whisper model from OpenAi. 
+#### Whisper
+All files starting with "Whisper" use the Whisper model from OpenAi. 
 There exist different versions of the usage of the model. The differences between the version can be retrieved from the detailedd descriptions of the different files in the folder. 
