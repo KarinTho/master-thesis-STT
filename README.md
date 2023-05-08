@@ -16,7 +16,7 @@ The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transc
 
 ## Files 
 ### Folder: Prepared Speech
-#### XLSR 
+#### XLSR 
 All files starting with "XLSR"  use the Wav2Vec XLS-R model. There exist different versions of the usage of the model, mainly differing in the way data gets loaded and preprocessed. 
 
 #### Whisper
