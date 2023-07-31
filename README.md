@@ -76,10 +76,10 @@ speech data set, only for first experiments
   + Small Version 2.3: Whisper fine-tuned on the small prepared speech data set, default parameters (save-steps = 100, total batch size = 16, learning rate = 0.00001) *(Thesis: Small default Whisper prepared speech model)
 * **STT_2_Whisper_V3**. Whisper: Prepared Speech Version 3: unused version, no fine-tuning
 * **STT_2_Whisper_V4**. Whisper: Prepared Speech Version 4
-  + Large Version 4.1: Whisper fine-tuned on the large prepared speech data set, German language token
-  + Small Version 4.1: Whisper fine-tuned on the small prepared speech data set, German language token 
-  + Small Version 4.2: Whisper fine-tuned on the small prepared speech data set, no German language token
-  + Small Version 4.3: Whisper fine-tuned on the small prepared speech data set, no German language token, fixed pre-processing *(Thesis: Comparable prepared speech Whisper model)
+  + Large Version 4.1: Whisper fine-tuned on the large prepared speech data set *(Thesis: Large Whisper prepared speech model)
+  + Small Version 4.2: Whisper fine-tuned on the small prepared speech data set, German language token *(Thesis: Prepared Speech German Whisper)
+  + Small Version 4.3: Whisper fine-tuned on the small prepared speech data set, no German language token
+  + Small Version 4.4: Whisper fine-tuned on the small prepared speech data set, no German language token, fixed pre-processing *(Thesis: Comparable prepared speech Whisper model)
 
 ### Folder: Spontaneous Speech
 **XLS-R**: All files containing "XLS-R" in their filename use the Wav2Vec XLS-R model from Facebook. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. These models are fine-tuned using spontaneous speech data. 
@@ -95,7 +95,7 @@ There exist different versions of the usage of the model. There exist different 
 * **STT_3_Spont_Whisper_V2_2**. Whisper: Spontaneous Speech Version 2.2: Whisper fine-tuned on the spontaneous speech data set. save-steps = 100 & other default settings of the Whisper model *(Thesis: Default Whisper spontaneous speech)
 * **STT_3_Spont_Whisper_V3**. Whisper: Spontaneous Speech Version 3: Whisper fine-tuned on the spontaneous speech data set. save-steps = 1000 & other default settings of the Whisper model and german language token 
 * **STT_3_Spont_Whisper_V4_1**. Whisper: Spontaneous Speech Version 4: Whisper fine-tuned on the spontaneous speech data set. save-steps = 400 & other settings of the comparable Whisper version. Additionally, noise is added. 
-* **STT_3_Spont_Whisper_V4_2**. Whisper: Spontaneous Speech Version 4: Whisper fine-tuned on the spontaneous speech data set. save-steps = 400 & other settings of the comparable Whisper version. No noise. German language token.
+* **STT_3_Spont_Whisper_V4_2**. Whisper: Spontaneous Speech Version 4: Whisper fine-tuned on the spontaneous speech data set. save-steps = 400 & other settings of the comparable Whisper version. No noise. German language token. *(Thesis: Spontaneous Speech German Whisper)
 * **STT_3_Spont_Whisper_V5**. Whisper: Spontaneous Speech Version 5: Whisper fine-tuned on the spontaneous speech data set. 
   + Spontaneous Speech Version 5.1: 2000 steps, save-steps = 400, lr=1e-5, dropout = 0.2, and noise, keep punctuation
   + Spontaneous Speech Version 5.2: 4000 steps, save-steps = 400, lr=3e-4, dropout = 0.2, no noise, keep punctuation  
