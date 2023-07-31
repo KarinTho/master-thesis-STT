@@ -5,16 +5,30 @@ Usage: Master Thesis at UZH (University of Zurich)
 
 Date: February - August 2023
 
-The goal of this master thesis is the development of a baseline for Swiss German Speech to text for prepared and spontaneous speech to compare the performance of a Automated Speech Recognition system on both types of speech. Moreover, the performance on spontaneous speech should be improved.
+Abstract: Translators, voice recordings, and voice control are often pre-installed on mobile devices to make everyday life easier. However, Swiss German speakers must use standard German or English when using speech recognition systems. The latest research shows that most of these systems are trained and evaluated on prepared speech. It remains an open question how these speech-to-text systems behave if they are applied to spontaneous speech, which consists of incomplete sentences, hesitations, and fillers. This can be summarised in the following research question: How does a pre-trained speech model fine-tuned on prepared speech behave differently compared to a model that is fine-tuned on spontaneous speech? Differences in speech styles lead to the assumption that performance drops when it comes to spontaneous speech. To assess the differences between prepared and spontaneous speech, two state-of-the-art pre-trained multilingual models were fine-tuned on the corresponding data. One is XLS-R developed by Facebook and proposed
+in 2022. Another model is Whisper by OpenAI, proposed in 2023. Surprisingly, the results of both models disprove the hypothesis, as they perform better on spontaneous speech. Multiple improvement techniques were evaluated on their impact on the models. On the one hand, increasing the size of the data set significantly increases performance. However, one main issue in automatically transcribing Swiss German is finding the correct word boundaries. As many errors occur at the character level, it remains open which evaluation metric is the most appropriate for spontaneous speech and a low-resource language like Swiss German.
 
 ## Table of Contents
-  * [Datasets](#datasets)
-    + [SDS-200](#sds-200)
-    + [Schawinski](#schawinski)
-  * [Files](#files)
-    + [Folder: Prepared Speech](#folder--prepared-speech)
-      - [XLSR](#xlsr)
-      - [Whisper](#whisper)
+  * [Folder: Preprocessing]
+  * [Folder: Prepared Speech](#folder--prepared-speech)
+    + STT_1_XLSR_V1
+    + STT_1_XLSR_V2
+    + STT_1_XLSR_V3
+    + STT_2_Whisper_V1
+    + STT_2_Whisper_V2
+    + STT_2_Whisper_V3
+    + STT_2_Whisper_V4
+  * [Folder: Spontaneous Speech]x
+    + STT_3_Spont_Whisper_V1
+    + STT_3_Spont_Whisper_V2
+    + STT_3_Spont_Whisper_V3
+    + STT_3_Spont_Whisper_V4
+    + STT_3_Spont_Whisper_V5
+    + STT_3_Spont_Whisper_V6
+    + STT_4_Spont_XLSR_V3
+  * PreAnalysis.ipynb
+  * Testing.ipynb
+
 
 ## Datasets
 ### SDS-200 
@@ -26,8 +40,10 @@ The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transc
 ## Files 
 ### Folder: Prepared Speech
 #### XLSR 
-All files starting with "XLSR"  use the Wav2Vec XLS-R model. There exist different versions of the usage of the model, mainly differing in the way data gets loaded and preprocessed. 
+All files containing "XLS-R" in their filename use the Wav2Vec XLS-R model from Facebook. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. 
 
 #### Whisper
-All files starting with "Whisper" use the Whisper model from OpenAi. 
-There exist different versions of the usage of the model. The differences between the version can be retrieved from the detailedd descriptions of the different files in the folder. 
+All files containing "Whisper" in their filename use the Whisper model from OpenAi. 
+There exist different versions of the usage of the model. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. 
+
+
