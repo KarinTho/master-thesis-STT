@@ -42,13 +42,15 @@ The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transc
 
 ## Files 
 ### Analysis
-* Preanalyze: Analysis of the data sets.
+* **PreAnalysis**: Analysis of the data sets.
 
 ### Evaluation
-* Testing: File to test the models on the test set.
+* **Testing**: File to test the models on the test set.
 
 ### Folder: Preprocessing
-
+* **sort_dataset**: all files starting with this file name are used to sort the data set in train, valid and test folders to load them into via AudioFolder to Huggingface. There exist different code files for the different data sets. 
+* **make_metadata**: all files starting wtih this file name are used to make the metadata file that is used to load the data set via AudioFolder to Huggingface. There exist different code files for the different data sets. 
+* **load_data_to_huggingface:** ll files starting wtih this file name are used to load the data set via AudioFolder to Huggingface. This code can be used if the metadata file is already in the correct directory and all train, test and validation files are sorted. There exist different code files for the different data sets. 
 
 ### Folder: Prepared Speech
 **XLS-R**: All files containing "XLS-R" in their filename use the Wav2Vec XLS-R model from Facebook. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. These models are fine-tuned using prepared speech data. 
@@ -96,8 +98,8 @@ There exist different versions of the usage of the model. There exist different 
   + Spontaneous Speech Version 5.1: 2000 steps, save-steps = 400, lr=1e-5, dropout = 0.2, and noise, keep punctuation
   + Spontaneous Speech Version 5.2: 4000 steps, save-steps = 400, lr=3e-4, dropout = 0.2, no noise, keep punctuation  
   + Spontaneous Speech Version 5.3: 4000 steps, save-steps = 400, lr=3e-4, dropout = 0.2, no noise, fixed pre-processing, no german language token, keep punctuation 
-  + Spontaneous Speech Version 5.4: 4000 steps, save-steps = 400, lr=3e-4, no dropout, no noise, fixed pre-processing, no german language token, keep punctuation +(Thesis: Spontaneous Speech Whisper, Improvement Punctuation)
+  + Spontaneous Speech Version 5.4: 4000 steps, save-steps = 400, lr=3e-4, no dropout, no noise, fixed pre-processing, no german language token, keep punctuation *(Thesis: Spontaneous Speech Whisper, Improvement Punctuation)
 * **STT_3_Spont_Whisper_V6**. Whisper: Spontaneous Speech Version 6: Whisper fine-tuned on the spontaneous speech data set. 
-  + Spontaneous Speech Version 6.1: comparable settings. Do not delete punctuation and other disfluency information from dataset during preprocessing. Dropout = 0.0 
-  + Spontaneous Speech Version 6.2: comparable settings. Add german language to processor and feature extractor. not only to tokenizer. do not delete punctuation and other disfluency information from data set. Droput = 0.5
-  + Spontaneous Speech Version 6.3: comparable settings. Add german language to processor and feature extractor. not only to tokenizer. do not delete punctuation and other disfluency information from data set. Dropout = 0.1 			
+  + Spontaneous Speech Version 6.1: comparable settings. Add german language to processor and feature extractor and force model to predict in german. Do not delete punctuation and other disfluency information from dataset during preprocessing. Dropout = 0.0  *(Thesis: Spontaneous Speech Whisper, Improvement Disfluency without Dropout)	
+  + Spontaneous Speech Version 6.2: comparable settings. Add german language to processor and feature extractor and force model to predict in german. Do not delete punctuation and other disfluency information from data set. Dropout = 0.5
+  + Spontaneous Speech Version 6.3: comparable settings. Add german language to processor and feature extractor and force model to predict in german. Do not delete punctuation and other disfluency information from data set. Dropout = 0.1 *(Thesis: Spontaneous Speech Whisper, Improvement Disfluency and Dropout)			
