@@ -1,4 +1,5 @@
 # master-thesis-STT
+## Swiss German Speech-to-Text: Test and Improve the Performance of Models on Spontaneous Speech
 **Author:** Karin Thommen 
 
 **Usage:** Master Thesis at UZH (University of Zurich) 
@@ -9,7 +10,10 @@
 Translators, voice recordings, and voice control are often pre-installed on mobile devices to make everyday life easier. However, Swiss German speakers must use standard German or English when using speech recognition systems. The latest research shows that most of these systems are trained and evaluated on prepared speech. It remains an open question how these speech-to-text systems behave if they are applied to spontaneous speech, which consists of incomplete sentences, hesitations, and fillers. This can be summarised in the following research question: How does a pre-trained speech model fine-tuned on prepared speech behave differently compared to a model that is fine-tuned on spontaneous speech? Differences in speech styles lead to the assumption that performance drops when it comes to spontaneous speech. To assess the differences between prepared and spontaneous speech, two state-of-the-art pre-trained multilingual models were fine-tuned on the corresponding data. One is XLS-R developed by Facebook and proposed
 in 2022. Another model is Whisper by OpenAI, proposed in 2023. Surprisingly, the results of both models disprove the hypothesis, as they perform better on spontaneous speech. Multiple improvement techniques were evaluated on their impact on the models. On the one hand, increasing the size of the data set significantly increases performance. However, one main issue in automatically transcribing Swiss German is finding the correct word boundaries. As many errors occur at the character level, it remains open which evaluation metric is the most appropriate for spontaneous speech and a low-resource language like Swiss German.
 
-**Remark**: Models described and used in the final version of the thesis are marked with a asterik * containing the name of the model as it is used in the thesis. 
+**Remark**: 
+*  Models described and used in the final version of the thesis are marked with an asterisk * containing the name of the model as it is used in the thesis.
+*  Details regarding the files and models can be found in the corresponding thesis. 
+
 
 ## Table of Contents
   * [Folder: Preprocessing](#folder-preprocessing)
