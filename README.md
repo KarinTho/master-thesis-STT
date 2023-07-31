@@ -22,13 +22,15 @@ in 2022. Another model is Whisper by OpenAI, proposed in 2023. Surprisingly, the
     + STT_2_Whisper_V3
     + STT_2_Whisper_V4
   * [Folder: Spontaneous Speech](#folder-spontaneous-speech)
-    + STT_3_Spont_Whisper_V1
-    + STT_3_Spont_Whisper_V2
-    + STT_3_Spont_Whisper_V3
-    + STT_3_Spont_Whisper_V4
-    + STT_3_Spont_Whisper_V5
-    + STT_3_Spont_Whisper_V6
-    + STT_4_Spont_XLSR_V3
+    + STT_3_Whisper_Spont_V1
+    + STT_3_Whisper_Spont_V2_1
+    + STT_3_Whisper_Spont_V2_2
+    + STT_3_Whisper_Spont_V3
+    + STT_3_Whisper_Spont_V4_1
+    + STT_3_Whisper_Spont_V4_2
+    + STT_3_Whisper_Spont_V5
+    + STT_3_Whisper_Spont_V6
+    + STT_4_XLSR_Spont_V1
   * PreAnalysis.ipynb
   * Testing.ipynb
 
