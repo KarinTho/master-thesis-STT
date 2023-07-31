@@ -13,24 +13,32 @@ in 2022. Another model is Whisper by OpenAI, proposed in 2023. Surprisingly, the
 
 ## Table of Contents
   * [Folder: Preprocessing](#folder-preprocessing)
+    + load_data_to_huggingface.py
+    + load_data_to_huggingface_schawinski.py
+    + load_data_to_huggingface_schawinski_2.py
+    + make_metadata.py
+    + make_metadata_schawinski.py
+    + make_metadata_schawinski_2.py
+    + sort_dataset.py
+    + sort_dataset_schawinski.py
   * [Folder: Prepared Speech](#folder-prepared-speech)
-    + STT_1_XLSR_V1
-    + STT_1_XLSR_V2
-    + STT_1_XLSR_V3
-    + STT_2_Whisper_V1
-    + STT_2_Whisper_V2
-    + STT_2_Whisper_V3
-    + STT_2_Whisper_V4
+    + STT_1_XLSR_V1.ipynb
+    + STT_1_XLSR_V2.ipynb
+    + STT_1_XLSR_V3.ipynb
+    + STT_2_Whisper_V1.ipynb
+    + STT_2_Whisper_V2.ipynb
+    + STT_2_Whisper_V3.ipynb
+    + STT_2_Whisper_V4.ipynb
   * [Folder: Spontaneous Speech](#folder-spontaneous-speech)
-    + STT_3_Whisper_Spont_V1
-    + STT_3_Whisper_Spont_V2_1
-    + STT_3_Whisper_Spont_V2_2
-    + STT_3_Whisper_Spont_V3
-    + STT_3_Whisper_Spont_V4_1
-    + STT_3_Whisper_Spont_V4_2
-    + STT_3_Whisper_Spont_V5
-    + STT_3_Whisper_Spont_V6
-    + STT_4_XLSR_Spont_V1
+    + STT_3_Whisper_Spont_V1.ipynb
+    + STT_3_Whisper_Spont_V2_1.ipynb
+    + STT_3_Whisper_Spont_V2_2.ipynb
+    + STT_3_Whisper_Spont_V3.ipynb
+    + STT_3_Whisper_Spont_V4_1.ipynb
+    + STT_3_Whisper_Spont_V4_2.ipynb
+    + STT_3_Whisper_Spont_V5.ipynb
+    + STT_3_Whisper_Spont_V6.ipynb
+    + STT_4_XLSR_Spont_V1.ipynb
   * PreAnalysis.ipynb
   * Testing.ipynb
 
@@ -50,9 +58,15 @@ The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transc
 * **Testing**: File to test the models on the test set.
 
 ### Folder: Preprocessing
-* **sort_dataset**: all files starting with this file name are used to sort the data set in train, valid and test folders to load them into via AudioFolder to Huggingface. There exist different code files for the different data sets. 
-* **make_metadata**: all files starting wtih this file name are used to make the metadata file that is used to load the data set via AudioFolder to Huggingface. There exist different code files for the different data sets. 
-* **load_data_to_huggingface:** ll files starting wtih this file name are used to load the data set via AudioFolder to Huggingface. This code can be used if the metadata file is already in the correct directory and all train, test and validation files are sorted. There exist different code files for the different data sets. 
+The files with the extension "schawinski" preprocess the spontaneous speech data for the first version. The first version is split as it was, with 20% testing, 80% training, with 20% for validation, with shuffled chunks among all speakers. Moreover, the first version does not contain any transcripts that contain a speech-in-speech or no-relevant-speech tag.
+
+The files with the extension "schawinski_2" preprocess the spontaneous speech data for the second version. To keep the option of testing a model on longer and more coherent audio, chunks that appear after another should be kept in the same data set split, especially for the test split. Therefore, half of a discussion between a male and a female speaker and half of a discussion between two male speakers are extracted for validation and the test set. All other speakers are part of the training data. Contrary to Version 1, the two tags no-relevant-speech and speech-in-speech tags are not removed from the transcripts in this version of the data set. Thus, the special annotation can be used later.
+
+All files without any extension preprocess the prepared speech data. 
+
+* **sort_dataset**: All files starting with this file name are used to sort the data set in train, valid and test folders to load them into via AudioFolder to Huggingface. There exist different code files for the different data sets. 
+* **make_metadata**: All files starting with this file name are used to make the metadata file that is used to load the data set via AudioFolder to Huggingface. There exist different code files for the different data sets. 
+* **load_data_to_huggingface:** All files starting with this file name are used to load the data set via AudioFolder to Huggingface. This code can be used if the metadata file is already in the correct directory and all train, test and validation files are sorted. There exist different code files for the different data sets. 
 
 ### Folder: Prepared Speech
 **XLS-R**: All files containing "XLS-R" in their filename use the Wav2Vec XLS-R model from Facebook. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. These models are fine-tuned using prepared speech data. 
