@@ -59,11 +59,11 @@ The dataset was provided by Tanja Samardzic (UZH). The audiofiles and the transc
 * **STT_1_XLSR_V1**. XLS-R: Prepared Speech Version 1: XLS-R fine-tuned on a small subset of the prepared speech data set, only for first experiments
 * **STT_1_XLSR_V2**. XLS-R: Prepared Speech Version 2: 
   + Version 2.1: XLS-R fine-tuned on the large prepared speech data set, without saving on Huggingface, trained for 6000 steps 
-   + Version 2.1: XLS-R fine-tuned on the large prepared speech data set, saved on Huggingface, trained for 4000 steps 
+   + Version 2.2: XLS-R fine-tuned on the large prepared speech data set, saved on Huggingface, trained for 4000 steps 
 * **STT_1_XLSR_V3**. XLS-R: Prepared Speech Version 3: 
   + Version 3.1: XLS-R fine-tuned on the large prepared speech data set, saved on Huggingface and WandB, trained for 4000 steps *(Thesis: Large prepared speech XLS-R model)
   + Version 3.2: XLS-R fine-tuned on the small prepared speech data set, saved on Huggingface, trained for 6000 steps
-  + Version 3.2: XLS-R fine-tuned on the small prepared speech data set, saved on Huggingface, trained for 4000 steps *(Thesis: Comparable prepared speech XLS-R model)
+  + Version 3.3: XLS-R fine-tuned on the small prepared speech data set, saved on Huggingface, trained for 4000 steps *(Thesis: Comparable prepared speech XLS-R model)
 
 **Whisper**: All files containing "Whisper" in their filename use the Whisper model from OpenAi. 
 There exist different versions of the usage of the model. There exist different versions of the model, mainly differing in the way data gets loaded and preprocessed. These models are fine-tuned using prepared speech data. 
